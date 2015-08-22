@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @amiga.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @amiga.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+<%= image_tag(@amiga.picture_url, :width => 250, :height=> 200) if @amiga.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_amiga_path(@amiga) %> |
+<%= link_to 'Back', amigas_path %>
